@@ -1,0 +1,46 @@
+include ../../data/cv
+mixin cv
+  aside.cv
+    .cv__header
+      .cv__img
+      h1.cv__name Mykola Liemiekhov
+      .cv__post Front End Developer
+      a(href='tel:+380636536097').cv__phone +380636536097
+      a(href='mailto:nicklemster@gmail.com').cv__email nicklemster@gmail.com
+      .cv__address Cherkasy, Ukraine
+    .cv__section
+      h2.cv__title Experience
+      .cv__profession-wrapper
+        .cv__profession Front End Developer
+        .cv__date 04/2020 - Present
+      .cv__organization.font-faint LigaA
+      ul
+        li 1 year of experience in performing Front End commercial tasks (Pug, SCSS, JavaScript)
+        li Completed the HTML Academy React tutorial project successfully
+    .cv__section
+      h2.cv__title Education
+      .cv__profession-wrapper
+        .cv__profession Frontend Developer, React Developer
+        .cv__date 2019
+      .cv__organization HTML Academy
+      ul
+        li 100% defended 7 projects
+        li Good foundation (HTML, CSS, SCSS, JavaScript)
+        li Done JavaScript + OOP project using Service Workers
+        li Done React project using Redux, Reselect and written tests in Jest and Enzym and also partially translated it to TypeScript
+    .cv__section
+      h2.cv__title Certificates
+      .cv__profession-wrapper
+        .cv__profession React. Development of Complex Front-end Applications
+        .cv__date 12/2020 - Present
+      .cv__profession-wrapper
+        .cv__profession Professional JavaScript, level 2
+        .cv__date 01/2020 - Present
+      .cv__profession-wrapper
+        .cv__profession Profession “Front-end Developer”
+        .cv__date 11/2019 - 11/2019
+    .cv__section
+      h2.cv__title Skills
+      ul
+        each it in skills
+          li

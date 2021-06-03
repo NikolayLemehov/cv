@@ -1,0 +1,23 @@
+.cv {
+  margin: 50px 0;
+  padding: 60px;
+  background-color: $color-default-white;
+  box-shadow: 0 16px 48px 0 rgba($color-default-black, 0.08);
+
+  &__profession-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__profession {
+    @include f-strong;
+  }
+
+  &__organization {
+    @include f-faint;
+  }
+
+  &__date {
+    @include f-faint;
+  }
+}
