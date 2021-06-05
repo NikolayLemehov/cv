@@ -1,46 +1,72 @@
 include ../../data/cv
 mixin cv
-  aside.cv
+  aside.cv&attributes(attributes)
     .cv__header
       .cv__img
-      h1.cv__name Mykola Liemiekhov
-      .cv__post Front End Developer
-      a(href='tel:+380636536097').cv__phone +380636536097
-      a(href='mailto:nicklemster@gmail.com').cv__email nicklemster@gmail.com
-      .cv__address Cherkasy, Ukraine
+        +picture("content", "selfie", "jpg", 122, 122, "Фото")
+      .cv__header-inner
+        h1.cv__name Mykola Liemiekhov
+        .cv__post Front End Developer
+      .cv__header-inner.cv__header-inner--last
+        .cv__header-inner-item
+          a.cv__link.cv__link--phone(href='tel:+380636536097') +380636536097
+            +icon("icon-phone", 12, 12).cv__link-icon
+        .cv__header-inner-item
+          a.cv__link.cv__link--email(href='mailto:nicklemster@gmail.com') nicklemster@gmail.com
+            +icon("icon-email", 12, 12).cv__link-icon
+        .cv__header-inner-item
+          .cv__address Cherkasy, Ukraine
+            +icon("icon-pin", 12, 12).cv__link-icon
+        .cv__header-inner-item
+          //-p LinkedIn:
+          a.cv__link(href='https://www.linkedin.com/in/nikolay-liemiekhov-270520180/', target="_blank")  Nikolay Liemiekhov
+            +icon("icon-linkedin", 12, 12).cv__link-icon
     .cv__section
       h2.cv__title Experience
       .cv__profession-wrapper
         .cv__profession Front End Developer
         .cv__date 04/2020 - Present
       .cv__organization.font-faint LigaA
-      ul
+      ul.cv__list
         li 1 year of experience in performing Front End commercial tasks (Pug, SCSS, JavaScript)
         li Completed the HTML Academy React tutorial project successfully
     .cv__section
       h2.cv__title Education
-      .cv__profession-wrapper
-        .cv__profession Frontend Developer, React Developer
-        .cv__date 2019
-      .cv__organization HTML Academy
-      ul
+      .cv__data-wrapper
+        .cv__profession-wrapper
+          .cv__profession Frontend Developer
+          .cv__date 01/21/2019 - 10/14/2019
+        .cv__organization HTML Academy
+      .cv__data-wrapper
+        .cv__profession-wrapper
+          .cv__profession JavaScript. Client Application Architecture
+          .cv__date 10/18/2019 - 01/29/2020
+        .cv__organization HTML Academy
+      .cv__data-wrapper
+        .cv__profession-wrapper
+          .cv__profession React Developer
+          .cv__date 09/28/2020 - 12/02/2020
+        .cv__organization HTML Academy
+      ul.cv__list
         li 100% defended 7 projects
         li Good foundation (HTML, CSS, SCSS, JavaScript)
         li Done JavaScript + OOP project using Service Workers
         li Done React project using Redux, Reselect and written tests in Jest and Enzym and also partially translated it to TypeScript
     .cv__section
-      h2.cv__title Certificates
-      .cv__profession-wrapper
-        .cv__profession React. Development of Complex Front-end Applications
-        .cv__date 12/2020 - Present
-      .cv__profession-wrapper
-        .cv__profession Professional JavaScript, level 2
-        .cv__date 01/2020 - Present
-      .cv__profession-wrapper
-        .cv__profession Profession “Front-end Developer”
-        .cv__date 11/2019 - 11/2019
-    .cv__section
       h2.cv__title Skills
-      ul
+      ul.cv__skills
         each it in skills
-          li
+          li.cv__skill-item
+            .cv__skill= it.skill
+            .cv__skill-value= skillRating[it.rate]
+    .cv__section
+      h2.cv__title Certificates
+      .cv__profession-wrapper.cv__profession-wrapper--certificate
+        .cv__profession React. Development of Complex Front-end Applications
+        .cv__date 12/02/2020
+      .cv__profession-wrapper.cv__profession-wrapper--certificate
+        .cv__profession Professional JavaScript, level 2
+        .cv__date 01/29/2020
+      .cv__profession-wrapper.cv__profession-wrapper--certificate
+        .cv__profession Profession “Front-end Developer”
+        .cv__date 10/14/2019

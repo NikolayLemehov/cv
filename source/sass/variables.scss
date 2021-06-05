@@ -11,7 +11,10 @@ $color-transparent:               rgba(255, 255, 255, 0);
 // Base
 
 $color-blue:                      #2c39f2;
+$color-black:                     #222222;
 $color-snow:                      #fafafa;
+$color-orange-peel:               #ff9900;
+$color-mango-tango:               #da8300;
 
 // Gradient
 
@@ -20,7 +23,8 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 // Typography
 //---------------------------------
 
-$font-family--placeholder:          "", "Arial", sans-serif;
+$font-family--roboto:               "Roboto", "Arial", sans-serif;
+$font-family--krona-one:            "Krona One", "Arial", sans-serif;
 
 // https://www.artlebedev.ru/kovodstvo/sections/159/
 $font-family--rouble:               "Rouble", "Arial", sans-serif;
@@ -47,3 +51,8 @@ $vp--1920:                          1920px;
 
 $retina-dpi:                        144dpi;
 $retina-dppx:                       1.5dppx;
+
+// Opacity
+//---------------------------------
+
+$opacity:                           0.7;

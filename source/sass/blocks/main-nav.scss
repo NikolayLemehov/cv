@@ -2,4 +2,12 @@
   &__toggle {
     display: none;
   }
+
+  &__link {
+    color: $color-default-white;
+
+    &--active {
+      color: $color-orange-peel;
+    }
+  }
 }

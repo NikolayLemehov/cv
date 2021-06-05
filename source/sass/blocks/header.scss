@@ -4,17 +4,27 @@
   min-height: 100px;
   padding: 0 40px;
 
+  color: $color-default-white;
   background-color: $color-default-black;
 
   &__wrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
-  a,
-  p {
-    color: $color-default-white;
+  &__logo {
+    color: inherit;
+
+    &--active {
+      color: $color-orange-peel;
+    }
   }
+
+  //a,
+  //p {
+  //  color: $color-default-white;
+  //}
 
   ul {
     display: flex;

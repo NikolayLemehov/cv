@@ -1,0 +1,15 @@
+extends ../base/layout
+
+block variables
+  - var title = "CV-Print" //- на страницах кроме главной используйте О нас — ProjectName
+  - var wrapperMods = ""
+  - var hasHeader = false
+  - var headerMods = ""
+  - var hasFooter = false
+  - var footerMods = ""
+  - var currentPage = PageData.CV_PRINT //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    .container
+      +cv()(class="cv--print")

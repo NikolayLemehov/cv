@@ -4,9 +4,120 @@
   background-color: $color-default-white;
   box-shadow: 0 16px 48px 0 rgba($color-default-black, 0.08);
 
+  &--print {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  &__list {
+    margin: 7px 0;
+    padding: 0 0 0 16px;
+  }
+
+  li {
+    @include f-normal;
+
+    &:not(last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__header {
+    @include f-normal;
+    display: flex;
+  }
+
+  &__header-inner {
+    //display: flex;
+    //flex-direction: column;
+    //align-items: flex-start;
+    margin-left: 40px;
+  }
+
+  &__header-inner-item {
+    &:not(last-child) {
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__img {
+    //margin-right: 40px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      border-radius: 5px;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    width: min-content;
+    font-family: $font-family--krona-one;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  &__post {
+    width: fit-content;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__header-inner-item {
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &__link {
+    color: inherit;
+    transition: color $trans--300;
+
+    @include hover {
+      //opacity: $opacity;
+      color: $color-mango-tango;
+    }
+  }
+
+  &__link-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &__section {
+    margin-top: 40px;
+    //padding-top: 40px;
+  }
+
+  &__title {
+    @include h2;
+    margin: 0 0 25px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-bottom: 4px solid $color-black;
+  }
+
+  &__data-wrapper {
+    margin-bottom: 5px;
+  }
+
   &__profession-wrapper {
     display: flex;
     justify-content: space-between;
+
+    &--certificate {
+      margin-bottom: 5px;
+    }
   }
 
   &__profession {
@@ -19,5 +130,27 @@
 
   &__date {
     @include f-faint;
+  }
+
+  &__skills {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    column-count: 2;
+    column-gap: 130px;
+  }
+
+  &__skill-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+
+  &__skill {
+    @include f-normal
+  }
+
+  &__skill-value {
+    @include f-faint
   }
 }

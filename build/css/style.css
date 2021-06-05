@@ -387,9 +387,57 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "RobotoSlab";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+  src: url("../fonts/roboto-slab-v13-latin-regular.woff2") format("woff2"), url("../fonts/roboto-slab-v13-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "RobotoSlab";
+  font-display: swap;
+  src: url("../fonts/roboto-slab-v13-latin-500.woff2") format("woff2"), url("../fonts/roboto-slab-v13-latin-500.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "RobotoSlab";
+  font-display: swap;
+  src: url("../fonts/roboto-slab-v13-latin-600.woff2") format("woff2"), url("../fonts/roboto-slab-v13-latin-600.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/roboto-v27-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v27-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/roboto-v27-latin-500.woff2") format("woff2"), url("../fonts/roboto-v27-latin-500.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/roboto-v27-latin-700.woff2") format("woff2"), url("../fonts/roboto-v27-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Krona One";
+  font-display: swap;
+  src: url("../fonts/krona-one-v9-latin-regular.woff2") format("woff2"), url("../fonts/krona-one-v9-latin-regular.woff") format("woff");
 }
 
 *,
@@ -417,8 +465,8 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "", "Arial", sans-serif;
-  color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #222222;
   background-color: #fafafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -623,9 +671,13 @@ button,
 
 .container {
   width: 100%;
-  max-width: 900px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
+}
+
+.container--cv {
+  max-width: 900px;
 }
 
 .font-faint {
@@ -636,10 +688,9 @@ button,
 }
 
 .font-strong {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   line-height: 18px;
-  color: #222222;
 }
 
 .header {
@@ -651,6 +702,7 @@ button,
   align-items: center;
   min-height: 100px;
   padding: 0 40px;
+  color: #ffffff;
   background-color: #000000;
 }
 
@@ -658,14 +710,20 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.header a,
-.header p {
-  color: #ffffff;
+.header__logo {
+  color: inherit;
+}
+
+.header__logo--active {
+  color: #ff9900;
 }
 
 .header ul {
@@ -685,6 +743,14 @@ button,
 
 .main-nav__toggle {
   display: none;
+}
+
+.main-nav__link {
+  color: #ffffff;
+}
+
+.main-nav__link--active {
+  color: #ff9900;
 }
 
 .footer {
@@ -804,6 +870,116 @@ button,
   box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.08);
 }
 
+.cv--print {
+  padding: 0;
+  margin: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.cv__list {
+  margin: 7px 0;
+  padding: 0 0 0 16px;
+}
+
+.cv li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.cv li:not(last-child) {
+  margin-bottom: 4px;
+}
+
+.cv__header {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cv__header-inner {
+  margin-left: 40px;
+}
+
+.cv__header-inner-item:not(last-child) {
+  margin-bottom: 6px;
+}
+
+.cv__header-inner-item p {
+  margin: 0;
+}
+
+.cv__img {
+  overflow: hidden;
+}
+
+.cv__img img {
+  display: block;
+  border-radius: 5px;
+}
+
+.cv__name {
+  margin: 0;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  font-family: "Krona One", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.cv__post {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.cv__header-inner-item {
+  position: relative;
+  padding-left: 20px;
+}
+
+.cv__link {
+  color: inherit;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.cv__link-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.cv__section {
+  margin-top: 40px;
+}
+
+.cv__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 25px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border-bottom: 4px solid #222222;
+}
+
+.cv__data-wrapper {
+  margin-bottom: 5px;
+}
+
 .cv__profession-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -813,11 +989,14 @@ button,
   justify-content: space-between;
 }
 
+.cv__profession-wrapper--certificate {
+  margin-bottom: 5px;
+}
+
 .cv__profession {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   line-height: 18px;
-  color: #222222;
 }
 
 .cv__organization {
@@ -834,12 +1013,54 @@ button,
   color: rgba(1, 1, 1, 0.47);
 }
 
+.cv__skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 130px;
+  -moz-column-gap: 130px;
+  column-gap: 130px;
+}
+
+.cv__skill-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.cv__skill {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.cv__skill-value {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(1, 1, 1, 0.47);
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
     color: red;
   }
 } */
+
+@media (hover: hover), screen and (min-width: 0\0) {
+  .cv__link:hover,
+  .cv__link:focus {
+    color: #da8300;
+  }
+}
 
 @media (max-width: 1439px) {
   .container {

@@ -1,26 +1,24 @@
+include ../data/page-data
 mixin header(headerMods, currentPage)
   -
     var headerLinks = [
       {
-        href: "#",
-        text: "Страница 1"
+        href: PageData.CV,
+        text: "CV",
       },
       {
-        href: "#",
-        text: "Страница 2"
-      },
-      {
-        href: "#",
-        text: "Страница 3"
+        href: PageData.CV_PRINT,
+        text: "CV-Print",
+        isBlank: true,
       },
     ]
 
   header.header(class=headerMods)
-    .header__wrapper
-      if(currentPage === "main")
-        a.header__logo Логотип
-      else
-        a.header__logo(href="main.html", aria-label="Переход на главную") Логотип
+    .header__wrapper.container
+      - var isCurrentPageLink = currentPage === PageData.MAIN
+      a.header__logo(class= isCurrentPageLink && 'header__logo--active', href= !isCurrentPageLink && PageData.MAIN,
+        aria-label= !isCurrentPageLink && "Переход на главную")
+        +icon("icon-home", 20, 20)
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)
@@ -28,7 +26,6 @@ mixin header(headerMods, currentPage)
           ul.main-nav__list
             each link, index in headerLinks
               li.main-nav__item
-                if(index === currentPage)
-                  a.main-nav__link.main-nav__link--active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+                -var isCurrentPageLink = currentPage === link.href
+                a.main-nav__link(class= isCurrentPageLink && 'main-nav__link--active',
+                  href= !isCurrentPageLink && link.href, target= link.isBlank && '_blank')=link.text
