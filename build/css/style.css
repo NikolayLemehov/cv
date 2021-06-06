@@ -579,6 +579,9 @@ button,
   padding: 0;
   color: #ffffff;
   background-color: #000000; }
+  @media (max-width: 767px) {
+    .header {
+      min-height: 60px; } }
   .header__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -715,6 +718,10 @@ button,
   background-color: #ffffff;
   -webkit-box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.08); }
+  @media (max-width: 767px) {
+    .cv {
+      margin: 30px 0;
+      padding: 30px 16px; } }
   .cv--print {
     padding: 0;
     margin: 0;
@@ -736,14 +743,52 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    @media (max-width: 469px) {
+      .cv__header {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+  .cv__header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (max-width: 767px) {
+      .cv__header-content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    @media (max-width: 469px) {
+      .cv__header-content {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .cv__header-inner {
     margin-left: 40px; }
-  .cv__header-inner-item:not(last-child) {
-    margin-bottom: 6px; }
-  .cv__header-inner-item p {
-    margin: 0; }
+    @media (max-width: 767px) {
+      .cv__header-inner:not(:last-child) {
+        margin-bottom: 15px; } }
+    @media (max-width: 469px) {
+      .cv__header-inner {
+        margin-left: 0; } }
+  .cv__header-inner-item {
+    position: relative;
+    padding-left: 20px; }
+    .cv__header-inner-item:not(last-child) {
+      margin-bottom: 6px; }
+    .cv__header-inner-item p {
+      margin: 0; }
   .cv__img {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     overflow: hidden; }
+    @media (max-width: 470px) {
+      .cv__img {
+        margin-bottom: 15px; } }
     .cv__img img {
       display: block;
       border-radius: 5px; }
@@ -756,6 +801,15 @@ button,
     font-weight: 400;
     font-size: 28px;
     line-height: 32px; }
+    @media (max-width: 767px) {
+      .cv__name {
+        width: auto;
+        margin-bottom: 5px; } }
+    @media (max-width: 470px) {
+      .cv__name {
+        width: -webkit-min-content;
+        width: -moz-min-content;
+        width: min-content; } }
   .cv__post {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -763,9 +817,6 @@ button,
     font-weight: 400;
     font-size: 18px;
     line-height: 22px; }
-  .cv__header-inner-item {
-    position: relative;
-    padding-left: 20px; }
   .cv__link {
     color: inherit;
     -webkit-transition: color 0.3s ease;
@@ -790,17 +841,16 @@ button,
     text-transform: uppercase;
     letter-spacing: 4px;
     border-bottom: 4px solid #222222; }
-  .cv__data-wrapper {
-    margin-bottom: 5px; }
   .cv__profession-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .cv__profession-wrapper--certificate {
-      margin-bottom: 5px; }
+            justify-content: space-between;
+    margin-bottom: 5px; }
   .cv__profession {
     font-weight: 600;
     font-size: 14px;
@@ -814,7 +864,8 @@ button,
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    color: rgba(1, 1, 1, 0.47); }
+    color: rgba(1, 1, 1, 0.47);
+    margin-left: auto; }
   .cv__skills {
     list-style: none;
     margin: 0;
@@ -825,6 +876,16 @@ button,
     -webkit-column-gap: 130px;
        -moz-column-gap: 130px;
             column-gap: 130px; }
+    @media (max-width: 767px) {
+      .cv__skills {
+        -webkit-column-gap: 60px;
+           -moz-column-gap: 60px;
+                column-gap: 60px; } }
+    @media (max-width: 499px) {
+      .cv__skills {
+        -webkit-column-count: 1;
+           -moz-column-count: 1;
+                column-count: 1; } }
   .cv__skill-item {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -4,49 +4,51 @@ mixin cv
     .cv__header
       .cv__img
         +picture("content", "selfie", "jpg", 122, 122, "Фото")
-      .cv__header-inner
-        h1.cv__name Mykola Liemiekhov
-        .cv__post Front End Developer
-      .cv__header-inner.cv__header-inner--last
-        .cv__header-inner-item
-          a.cv__link.cv__link--phone(href='tel:+380636536097') +380636536097
-            +icon("icon-phone", 12, 12).cv__link-icon
-        .cv__header-inner-item
-          a.cv__link.cv__link--email(href='mailto:nicklemster@gmail.com') nicklemster@gmail.com
-            +icon("icon-email", 12, 12).cv__link-icon
-        .cv__header-inner-item
-          .cv__address Cherkasy, Ukraine
-            +icon("icon-pin", 12, 12).cv__link-icon
-        .cv__header-inner-item
-          //-p LinkedIn:
-          a.cv__link(href='https://www.linkedin.com/in/nikolay-liemiekhov-270520180/', target="_blank")  Nikolay Liemiekhov
-            +icon("icon-linkedin", 12, 12).cv__link-icon
+      .cv__header-content
+        .cv__header-inner
+          h1.cv__name Mykola Liemiekhov
+          .cv__post Front End Developer
+        .cv__header-inner.cv__header-inner--last
+          .cv__header-inner-item
+            a.cv__link.cv__link--phone(href='tel:+380636536097') +380636536097
+              +icon("icon-phone", 12, 12).cv__link-icon
+          .cv__header-inner-item
+            a.cv__link.cv__link--email(href='mailto:nicklemster@gmail.com') nicklemster@gmail.com
+              +icon("icon-email", 12, 12).cv__link-icon
+          .cv__header-inner-item
+            .cv__address Cherkasy, Ukraine
+              +icon("icon-pin", 12, 12).cv__link-icon
+          .cv__header-inner-item
+            //-p LinkedIn:
+            a.cv__link(href='https://www.linkedin.com/in/nikolay-liemiekhov-270520180/', target="_blank")  Nikolay Liemiekhov
+              +icon("icon-linkedin", 12, 12).cv__link-icon
     .cv__section
       h2.cv__title Experience
       .cv__profession-wrapper
-        .cv__profession Front End Developer
+        .cv__data-wrapper
+          .cv__profession Front End Developer
+          .cv__organization LigaA
         .cv__date 04/2020 - Present
-      .cv__organization.font-faint LigaA
       ul.cv__list
         li 1 year of experience in performing Front End commercial tasks (Pug, SCSS, JavaScript)
         li Completed the HTML Academy React tutorial project successfully
     .cv__section
       h2.cv__title Education
-      .cv__data-wrapper
-        .cv__profession-wrapper
+      .cv__profession-wrapper
+        .cv__data-wrapper
           .cv__profession Frontend Developer
-          .cv__date 01/21/2019 - 10/14/2019
-        .cv__organization HTML Academy
-      .cv__data-wrapper
-        .cv__profession-wrapper
+          .cv__organization HTML Academy
+        .cv__date 01/21/2019 - 10/14/2019
+      .cv__profession-wrapper
+        .cv__data-wrapper
           .cv__profession JavaScript. Client Application Architecture
-          .cv__date 10/18/2019 - 01/29/2020
-        .cv__organization HTML Academy
-      .cv__data-wrapper
-        .cv__profession-wrapper
+          .cv__organization HTML Academy
+        .cv__date 10/18/2019 - 01/29/2020
+      .cv__profession-wrapper
+        .cv__data-wrapper
           .cv__profession React Developer
-          .cv__date 09/28/2020 - 12/02/2020
-        .cv__organization HTML Academy
+          .cv__organization HTML Academy
+        .cv__date 09/28/2020 - 12/02/2020
       ul.cv__list
         li 100% defended 7 projects
         li Good foundation (HTML, CSS, SCSS, JavaScript)
