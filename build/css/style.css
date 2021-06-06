@@ -593,17 +593,27 @@ button,
         -ms-flex-align: center;
             align-items: center; }
   .header__logo {
-    color: inherit; }
+    color: inherit;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease; }
     .header__logo--active {
       color: #ff9900; }
+    @media (hover: hover), screen and (min-width: 0\0) {
+      .header__logo:hover, .header__logo:focus {
+        color: #da8300; } }
 
 .main-nav__toggle {
   display: none; }
 
 .main-nav__link {
-  color: #ffffff; }
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
   .main-nav__link--active {
     color: #ff9900; }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .main-nav__link:hover, .main-nav__link:focus {
+      color: #da8300; } }
 
 .main-nav__list {
   display: -webkit-box;

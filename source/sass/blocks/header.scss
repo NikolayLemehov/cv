@@ -19,9 +19,14 @@
 
   &__logo {
     color: inherit;
+    transition: color $trans--300;
 
     &--active {
       color: $color-orange-peel;
+    }
+
+    @include hover {
+      color: $color-mango-tango;
     }
   }
 
