@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   min-height: 100px;
-  padding: 0 40px;
+  padding: 0;
 
   color: $color-default-white;
   background-color: $color-default-black;
@@ -25,18 +25,4 @@
   //p {
   //  color: $color-default-white;
   //}
-
-  ul {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
-
-    list-style: none;
-
-    li {
-      margin-right: 20px;
-    }
-  }
 }
