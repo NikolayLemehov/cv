@@ -1,0 +1,10 @@
+.link-list {
+  a {
+    color: inherit;
+    transition: color $trans--300;
+
+    @include hover {
+      color: $color-mango-tango;
+    }
+  }
+}
