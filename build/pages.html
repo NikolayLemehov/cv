@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>ProjectName</title>
+    <title>Список страниц</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,35 +11,58 @@
   <body>
     <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-email" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z" fill="currentColor"/></symbol><symbol id="icon-home" viewBox="0 0 26 26"><path d="M 20 2.03125 C 19.449219 2.03125 19 2.480469 19 3.03125 L 19 7.8125 L 13.71875 2.53125 C 13.328125 2.140625 12.671875 2.140625 12.28125 2.53125 L 0.5625 14.28125 C 0.171875 14.671875 0.171875 15.296875 0.5625 15.6875 C 0.953125 16.078125 1.578125 16.078125 1.96875 15.6875 L 13 4.65625 L 24.0625 15.71875 C 24.257813 15.914063 24.523438 16.03125 24.78125 16.03125 C 25.039063 16.03125 25.273438 15.914063 25.46875 15.71875 C 25.859375 15.328125 25.859375 14.703125 25.46875 14.3125 L 22 10.84375 L 22 3.03125 C 22 2.480469 21.550781 2.03125 21 2.03125 Z M 13 6.5 L 2 17.5 L 2 23 C 2 24.65625 3.34375 26 5 26 L 21 26 C 22.65625 26 24 24.65625 24 23 L 24 17.5 Z M 11 16 L 15 16 C 15.550781 16 16 16.449219 16 17 L 16 23 C 16 23.550781 15.550781 24 15 24 L 11 24 C 10.449219 24 10 23.550781 10 23 L 10 17 C 10 16.449219 10.449219 16 11 16 Z" fill="currentColor"/></symbol><symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="currentColor"/></symbol><symbol id="icon-phone" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z" fill="currentColor"/></symbol><symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" fill="currentColor"/></symbol></svg></div>
     <div class="wrapper">
-      <header class="header">
-        <div class="header__wrapper container"><a class="header__logo header__logo--active">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xlink:href="#icon-home"></use>
-            </svg></a>
-          <nav class="main-nav">
-            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-              <svg width="20" height="20" aria-hidden="true">
-                <use xlink:href="#icon-burger"></use>
-              </svg>
-            </button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="cv.html">CV</a>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="cv-print.html" target="_blank">CV-Print</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <main>
-        <div class="container">
-          <ul>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="cv-print.html" target="_blank">CV Print</a></li>
-          </ul>
-        </div>
+      <style>
+        .container {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+        
+        h1 {
+          font-size: 24px;
+          line-height: 28px;
+        }
+        
+        a {
+          color: rgb(10, 10, 175);
+        }
+        
+        li {
+          font-size: 18px;
+          line-height: 22px;
+          margin-bottom: 7px;
+        }
+        
+        img {
+          width: 100%;
+          max-width: 300px;
+          height: auto;
+          display: block;
+          margin-bottom: 40px;
+        }
+        
+        @media (max-width: 768px) {
+          .container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+        
+          ol {
+            padding-left: 20px;
+          }
+        
+          ol li {
+            margin-bottom: 15px;
+          }
+        }
+        
+      </style>
+      <main class="container main-index"><img src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта">
+        <h1>Список страниц</h1>
+        <ol>
+          <li><a href="ui-kit.html">UI-kit — ui-kit.html</a></li>
+          <li><a href="main.html">Главная — main.html</a></li>
+          <li><a href="cv.html">CV — cv.html</a></li>
+        </ol>
       </main>
     </div>
     <script src="js/vendor.min.js"></script>
