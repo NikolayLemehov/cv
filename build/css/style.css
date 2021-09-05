@@ -795,12 +795,18 @@ button,
   .cv__img {
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    width: 122px;
+    height: 122px;
     overflow: hidden; }
     @media (max-width: 470px) {
       .cv__img {
         margin-bottom: 15px; } }
     .cv__img img {
       display: block;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
       border-radius: 5px; }
   .cv__name {
     margin: 0;
@@ -909,6 +915,11 @@ button,
     font-size: 14px;
     line-height: 18px; }
   .cv__skill-value {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    position: relative;
+    width: 59px;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
@@ -921,6 +932,29 @@ button,
   @media (hover: hover), screen and (min-width: 0\0) {
     .link-list a:hover, .link-list a:focus {
       color: #da8300; } }
+
+.rating {
+  position: relative;
+  width: 59px;
+  height: 12px;
+  font-size: 0; }
+  .rating::before {
+    background: url("../img/svg/no-rating.svg") no-repeat 0 0; }
+  .rating span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    overflow: hidden; }
+    .rating span::before {
+      background: url("../img/svg/full-rating.svg") no-repeat 0 0; }
+  .rating span::before, .rating::before {
+    content: "";
+    display: block;
+    width: 59px;
+    height: 100%;
+    background-size: contain; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

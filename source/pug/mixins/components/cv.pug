@@ -3,7 +3,7 @@ mixin cv
   aside.cv&attributes(attributes)
     .cv__header
       .cv__img
-        +picture("content", "selfie", "jpg", 122, 122, "Фото")
+        +picture("content", "my-photo", "jpg", 122, 122, "Фото")
       .cv__header-content
         .cv__header-inner
           h1.cv__name Mykola Liemiekhov
@@ -60,7 +60,8 @@ mixin cv
         each it in skills
           li.cv__skill-item
             .cv__skill= it.skill
-            .cv__skill-value= skillRating[it.rate]
+            .cv__skill-value
+              +rating(it.rate)
     .cv__section
       h2.cv__title Certificates
       .cv__profession-wrapper.cv__profession-wrapper--certificate

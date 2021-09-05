@@ -1,0 +1,6 @@
+mixin rating(rating)
+  -
+    var maxRating = 5
+    var width = `${rating / maxRating * 100}%`
+  .rating rating
+    span(style=`width: ${width}`)

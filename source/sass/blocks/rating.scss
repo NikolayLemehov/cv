@@ -1,0 +1,32 @@
+.rating {
+  position: relative;
+  width: 59px;
+  height: 12px;
+  font-size: 0;
+
+  &::before {
+    background: url("../img/svg/no-rating.svg") no-repeat 0 0;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+
+    &::before {
+      background: url("../img/svg/full-rating.svg") no-repeat 0 0;
+    }
+  }
+
+  & span::before,
+  &::before {
+    content: "";
+    display: block;
+    width: 59px;
+    height: 100%;
+    background-size: contain;
+  }
+}
