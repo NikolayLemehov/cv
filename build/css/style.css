@@ -941,8 +941,10 @@ button,
   width: 59px;
   height: 12px;
   font-size: 0; }
-  .rating__empty {
-    background: url("../img/svg/no-rating.svg") no-repeat 0 50%; }
+  .rating img {
+    display: block;
+    width: 100%;
+    height: 100%; }
   .rating__fill {
     position: absolute;
     top: 0;
@@ -950,19 +952,15 @@ button,
     display: block;
     height: 100%;
     overflow: hidden; }
-  .rating__sub-fill {
-    background: url("../img/svg/full-rating.svg") no-repeat 0 50%; }
   .rating__empty, .rating__sub-fill {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: calc(7px * 5 * 1.7);
     height: 100%;
     background-size: contain; }
   .rating--9 {
     width: calc(7px * 9 * 1.7); }
-    .rating--9 .rating__empty {
-      background: url("../img/svg/no-rating-9.svg") no-repeat 0 0; }
-    .rating--9 .rating__sub-fill {
-      background: url("../img/svg/full-rating-9.svg") no-repeat 0 0; }
     .rating--9 .rating__empty,
     .rating--9 .rating__sub-fill {
       width: calc(7px * 9 * 1.7);

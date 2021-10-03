@@ -4,5 +4,7 @@ mixin rating(rating, maxRating)
     var width = `${rating / maxRating * 100}%`
   .rating(class=maxRating === 9 && 'rating--9')
     span.rating__empty
+      +img('svg', `no-rating-${maxRating}`, 'svg', 52, 12, 'altText')
     span.rating__fill(style=`width: ${width}`)
       span.rating__sub-fill
+        +img('svg', `full-rating-${maxRating}`, 'svg', 52, 12, 'altText')
