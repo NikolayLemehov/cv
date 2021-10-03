@@ -1,6 +1,8 @@
-mixin rating(rating)
+mixin rating(rating, maxRating)
   -
-    var maxRating = 5
+    maxRating = maxRating || 5
     var width = `${rating / maxRating * 100}%`
-  .rating rating
-    span(style=`width: ${width}`)
+  .rating(class=maxRating === 9 && 'rating--9')
+    span.rating__empty
+    span.rating__fill(style=`width: ${width}`)
+      span.rating__sub-fill

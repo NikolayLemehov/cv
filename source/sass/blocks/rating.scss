@@ -4,11 +4,11 @@
   height: 12px;
   font-size: 0;
 
-  &::before {
-    background: url("../img/svg/no-rating.svg") no-repeat 0 0;
+  &__empty {
+    background: url("../img/svg/no-rating.svg") no-repeat 0 50%;
   }
 
-  span {
+  &__fill {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,17 +16,39 @@
     height: 100%;
     overflow: hidden;
 
-    &::before {
-      background: url("../img/svg/full-rating.svg") no-repeat 0 0;
-    }
+    //&::before {
+    //  background: url("../img/svg/full-rating.svg") no-repeat 0 50%;
+    //}
   }
 
-  & span::before,
-  &::before {
-    content: "";
+  &__sub-fill {
+    background: url("../img/svg/full-rating.svg") no-repeat 0 50%;
+  }
+
+  &__empty ,
+  &__sub-fill {
+    //content: "";
     display: block;
-    width: 59px;
+    width: calc(7px * 5 * 1.7);
     height: 100%;
     background-size: contain;
+  }
+
+  &--9 {
+    width: calc(7px * 9 * 1.7);
+
+    .rating__empty {
+      background: url("../img/svg/no-rating-9.svg") no-repeat 0 0;
+    }
+
+    .rating__sub-fill {
+      background: url("../img/svg/full-rating-9.svg") no-repeat 0 0;
+    }
+
+    .rating__empty,
+    .rating__sub-fill {
+      width: calc(7px * 9 * 1.7);
+      background-size: 100% 100%;
+    }
   }
 }

@@ -732,6 +732,9 @@ button,
     .cv {
       margin: 30px 0;
       padding: 30px 16px; } }
+  .cv p {
+    font-size: 14px;
+    line-height: 1.3; }
   .cv--print {
     padding: 0;
     margin: 0;
@@ -938,23 +941,32 @@ button,
   width: 59px;
   height: 12px;
   font-size: 0; }
-  .rating::before {
-    background: url("../img/svg/no-rating.svg") no-repeat 0 0; }
-  .rating span {
+  .rating__empty {
+    background: url("../img/svg/no-rating.svg") no-repeat 0 50%; }
+  .rating__fill {
     position: absolute;
     top: 0;
     left: 0;
     display: block;
     height: 100%;
     overflow: hidden; }
-    .rating span::before {
-      background: url("../img/svg/full-rating.svg") no-repeat 0 0; }
-  .rating span::before, .rating::before {
-    content: "";
+  .rating__sub-fill {
+    background: url("../img/svg/full-rating.svg") no-repeat 0 50%; }
+  .rating__empty, .rating__sub-fill {
     display: block;
-    width: 59px;
+    width: calc(7px * 5 * 1.7);
     height: 100%;
     background-size: contain; }
+  .rating--9 {
+    width: calc(7px * 9 * 1.7); }
+    .rating--9 .rating__empty {
+      background: url("../img/svg/no-rating-9.svg") no-repeat 0 0; }
+    .rating--9 .rating__sub-fill {
+      background: url("../img/svg/full-rating-9.svg") no-repeat 0 0; }
+    .rating--9 .rating__empty,
+    .rating--9 .rating__sub-fill {
+      width: calc(7px * 9 * 1.7);
+      background-size: 100% 100%; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
