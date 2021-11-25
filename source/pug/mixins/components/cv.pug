@@ -22,6 +22,7 @@ mixin cv
             //-p LinkedIn:
             a.cv__link(href='https://www.linkedin.com/in/nikolay-liemiekhov-270520180/', target="_blank")  Nikolay Liemiekhov
               +icon("icon-linkedin", 12, 12).cv__link-icon
+
     .cv__section
       h2.cv__title Experience
       .cv__profession-wrapper
@@ -31,6 +32,24 @@ mixin cv
         .cv__date 04/2020 - Present
       ul.cv__list
         li Convert Figma layouts to HTML pages and create JS functionality on vanilla JS.
+        li Completed 13 NDA projects
+        li Projects team: QA, PM, Team Lead, Backend Developer, 1-5 - Frontend Developer
+
+    .cv__section
+      h2.cv__title Skills
+      ul.cv__skills
+        each it in skills
+          li.cv__skill-item
+            .cv__skill= it.skill
+            .cv__skill-value
+              +rating(it.rate)
+
+    .cv__section
+      h2.cv__title English level
+      .cv__profession-wrapper.cv__profession-wrapper--certificate
+        .cv__profession Elementary
+        +rating(2, 9)
+
     .cv__section
       h2.cv__title Education
       .cv__profession-wrapper
@@ -49,18 +68,11 @@ mixin cv
           .cv__organization HTML Academy
         .cv__date 01/21/2019 - 10/14/2019
       ul.cv__list
-        li 100% defended 7 projects
-        li Good foundation (HTML, CSS, SCSS, JavaScript)
-        li Done JavaScript + OOP project using Service Workers
+        li 100% defended 7 training projects
         li Done React project using Redux, Reselect and written tests in Jest and Enzym and also partially translated it to TypeScript
-    .cv__section
-      h2.cv__title Skills
-      ul.cv__skills
-        each it in skills
-          li.cv__skill-item
-            .cv__skill= it.skill
-            .cv__skill-value
-              +rating(it.rate)
+        li Done JavaScript + OOP project using Service Workers
+        li Good foundation (HTML, CSS, SCSS, JavaScript)
+
     .cv__section
       h2.cv__title Certificates
       .cv__profession-wrapper.cv__profession-wrapper--certificate
@@ -72,12 +84,8 @@ mixin cv
       .cv__profession-wrapper.cv__profession-wrapper--certificate
         .cv__profession Profession “Front-end Developer”
         .cv__date 10/14/2019
-    .cv__section
-      h2.cv__title English level
-      .cv__profession-wrapper.cv__profession-wrapper--certificate
-        .cv__profession Elementary
-        +rating(2, 9)
-    .cv__section
+
+    //-.cv__section
       h2.cv__title Projects
 
       .cv__profession-wrapper
